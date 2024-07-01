@@ -28,6 +28,7 @@
   "homepage": "https://github.com/evancohen/sonus#readme",
   "dependencies": {
     "@google-cloud/speech": "^4.2.0",
+    "nan":"^2.20.0",
     "node-record-lpcm16": "^0.3.1",
     "snowboy": "git+https://git@github.com/leon-ai/snowboy.git",
     "waitprocess": "git+https://git@github.com/sdetweil/waitprocess.git"
