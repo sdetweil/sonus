@@ -8,10 +8,10 @@
     "preinstall": "./preinstall",
     "postinstall": "./postinstall"
   },
-  "typings": "components/lib/node/index.d.ts",
+  "typings": "snowboy/lib/node/index.d.ts",
   "binary": {
     "module_name": "snowboy",
-    "module_path": "./components/lib/node/binding/{configuration}/{node_abi}-{platform}-{arch}/",
+    "module_path": "./snowboy/lib/node/binding/{configuration}/{node_abi}-{platform}-{arch}/",
     "remote_path": "./{module_name}/v{version}/{configuration}/",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
     "host": "https://github.com/bugsounet/snowboy"
