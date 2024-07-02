@@ -2,13 +2,13 @@
     'targets': [{
         'target_name': 'snowboy',
         'sources': [
-            'components/lib/snowboy.cc'
+            'snowboy/lib/snowboy.cc'
         ],
         'conditions': [
             ['OS=="mac"', {
                 'link_settings': {
                     'libraries': [
-                        '<(module_root_dir)/components/lib/osx/libsnowboy-detect.a',
+                        '<(module_root_dir)/snowboy/lib/osx/libsnowboy-detect.a',
                     ]
                 }
             }],
@@ -18,7 +18,7 @@
                         '-Wl,--no-as-needed',
                     ],
                     'libraries': [
-                        '<(module_root_dir)/components/lib/x64/libsnowboy-detect.a',
+                        '<(module_root_dir)/snowboy/lib/x64/libsnowboy-detect.a',
                     ]
                 }
             }],
@@ -28,7 +28,7 @@
                         '-Wl,--no-as-needed',
                     ],
                     'libraries': [
-                        '<(module_root_dir)/components/lib/rpi/libsnowboy-detect.a',
+                        '<(module_root_dir)/snowboy/lib/rpi/libsnowboy-detect.a',
                     ]
                 }
             }],
@@ -38,7 +38,7 @@
                         '-Wl,--no-as-needed',
                     ],
                     'libraries': [
-                        '<(module_root_dir)/components/lib/arm64/libsnowboy-detect.a',
+                        '<(module_root_dir)/snowboy/lib/arm64/libsnowboy-detect.a',
                     ]
                 }
             }]
@@ -57,7 +57,7 @@
         ],
         'include_dirs': [
             "<!(node -e \"require('nan')\")",
-            "<!(pwd)/components/include"
+            "<!(pwd)/snowboy/include"
         ],
         'libraries': [
             '-lcblas'
