@@ -96,14 +96,14 @@ Sonus.init = (options, recognizer) => {
 
   // if not doing hotword detection
   if(opts.hotwords!=-1){
-    const { Detector, Models } = require('snowboy')
+    const { Detector, Models } = require('./snowboy/lib/node/index.js')
     Sonus.annyang = require('./lib/annyang-core.js')
     const models  = new Models()
     // If we don't have any hotwords passed in, add the default global model
     opts.hotwords = opts.hotwords || [1]
     opts.hotwords.forEach(model => {
       models.add({
-        file: model.file || 'node_modules/snowboy/resources/snowboy.umdl',
+        file: model.file || './snowboy/models/snowboy.umdl',
         sensitivity: model.sensitivity || '0.5',
         hotwords: model.hotword || 'default'
       })
@@ -111,7 +111,7 @@ Sonus.init = (options, recognizer) => {
 
     // defaults
     opts.models = models
-    opts.resource = opts.resource || 'node_modules/snowboy/resources/common.res'
+    opts.resource = opts.resource || './snowboy/common.res'
     opts.audioGain = opts.audioGain || 2.0
     opts.language = opts.language || 'en-US' //https://cloud.google.com/speech/docs/languages
 

@@ -42,3 +42,5 @@ jspm_packages
 # Keyfile
 keyfile.json
 /.idea/
+/snowboy/lib/node/index.js
+/components/lib/node/binding/Release/node-v127-linux-x64/snowboy.node
