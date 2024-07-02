@@ -103,7 +103,7 @@ Sonus.init = (options, recognizer) => {
     opts.hotwords = opts.hotwords || [1]
     opts.hotwords.forEach(model => {
       models.add({
-        file: model.file || './snowboy/models/snowboy.umdl',
+        file: model.file || 'node_modules/sonus/resources/snowboy.umdl',
         sensitivity: model.sensitivity || '0.5',
         hotwords: model.hotword || 'default'
       })
@@ -111,7 +111,7 @@ Sonus.init = (options, recognizer) => {
 
     // defaults
     opts.models = models
-    opts.resource = opts.resource || './snowboy/common.res'
+    opts.resource = opts.resource || 'node_modules/sonus/resources/common.res'
     opts.audioGain = opts.audioGain || 2.0
     opts.language = opts.language || 'en-US' //https://cloud.google.com/speech/docs/languages
 
