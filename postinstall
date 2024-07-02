@@ -1,0 +1,3 @@
+#!/bin/bash
+node-pre-gyp install --fallback-to-build
+tsc -p ./tsconfig.json

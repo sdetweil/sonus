@@ -1,5 +1,6 @@
 #!/bin/bash
-sudo apt-get install -y libatlas-base-dev 
+#sudo apt-get install -y libatlas-base-dev 
+sudo apt-get install -y libmagic-dev libatlas-base-dev sox libsox-fmt-all build-essential
 py_present=$(which python3)
 if [ "$py_present." == "." ]; then 
    sudo apt-get install python3
